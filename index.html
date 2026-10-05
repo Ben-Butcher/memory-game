@@ -8,13 +8,24 @@
     <title>Memory Game</title>
   </head>
   <body>
-    <div class="hero-container">
+    <header class="hero-container">
+      <p class="eyebrow">Match the pairs</p>
       <h1>Memory Game</h1>
-    </div>
-    <main id="root"></main>
-    <div class="score">
-      <p>Moves: <span id="moves"></span></p>
-      <p>Pairs Found: <span id="pairs-found"></span></p>
-    </div>
+      <p class="subtitle">
+        Study the board, remember the locations, then uncover every matching
+        image.
+      </p>
+      <div class="score" aria-label="Game status">
+        <p>Moves: <span id="moves">0</span></p>
+        <p>Pairs Found: <span id="pairs-found">0</span></p>
+      </div>
+      <p id="status" class="status" aria-live="polite">
+        The cards will be revealed briefly at the start.
+      </p>
+      <button id="restart-game" class="restart-button" type="button">
+        Restart Game
+      </button>
+    </header>
+    <main id="root" aria-live="polite"></main>
   </body>
 </html>
